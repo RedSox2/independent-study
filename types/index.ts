@@ -3,9 +3,9 @@ export type Category = 'Gear' | 'Food' | 'Supplies';
 export type TabType = 'packing' | 'meals' | 'costs';
 
 export interface PackingItem {
-  id: number;
-  name: string;
-  category: Category;
-  isPacked: boolean;
-  assignedTo: string;
+  id: string | number;
+  item_name: string;
+  is_packed: boolean;
+  assigned_to?: string; // New field added
+  created_at?: string;
 }
