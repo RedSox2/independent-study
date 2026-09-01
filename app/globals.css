@@ -7,3 +7,136 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   }
 }
+
+/* Layout & Containers */
+.page-container {
+  @apply min-h-screen bg-slate-950 text-slate-100 p-4 font-sans;
+  @media (min-width: 640px) {
+    @apply p-8;
+  }
+}
+
+.page-wrapper {
+  @apply max-w-3xl mx-auto space-y-6;
+}
+
+/* Header Card */
+.header-card {
+  @apply bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-700 rounded-3xl p-6 shadow-2xl border border-emerald-500/20 relative overflow-hidden;
+  @media (min-width: 640px) {
+    @apply p-8;
+  }
+}
+
+.header-blur-bg {
+  @apply absolute -right-6 -bottom-6 w-36 h-36 bg-white/5 rounded-full blur-2xl pointer-events-none;
+}
+
+.header-top {
+  @apply flex flex-col justify-between gap-4 mb-6;
+  @media (min-width: 640px) {
+    @apply flex-row items-center;
+  }
+}
+
+.header-icon-box {
+  @apply p-3.5 bg-white/10 rounded-2xl backdrop-blur-md shadow-inner;
+}
+
+.header-badge {
+  @apply inline-block bg-emerald-950/40 text-emerald-200 text-xs px-2.5 py-0.5 rounded-full font-semibold mb-1 backdrop-blur-sm;
+}
+
+.header-subtext {
+  @apply text-emerald-100/80 text-xs flex items-center gap-1.5 mt-1;
+  @media (min-width: 640px) {
+    @apply text-sm;
+  }
+}
+
+.avatar-initial {
+  @apply w-9 h-9 rounded-full border-2 border-emerald-700 flex items-center justify-center text-xs font-bold;
+}
+
+.invite-btn {
+  @apply p-2 bg-white/10 hover:bg-white/20 rounded-full transition text-xs font-semibold;
+}
+
+.progress-card {
+  @apply space-y-2 bg-black/20 p-4 rounded-2xl backdrop-blur-md border border-white/10;
+}
+
+.progress-track {
+  @apply w-full h-3 bg-slate-950/40 rounded-full overflow-hidden p-0.5;
+}
+
+.progress-fill {
+  @apply h-full bg-gradient-to-r from-emerald-400 to-teal-200 transition-all duration-500 ease-out rounded-full;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  @apply flex gap-2 p-1.5 bg-slate-900 border border-slate-800 rounded-2xl;
+}
+
+.tab-btn {
+  @apply flex-1 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all text-slate-400 hover:text-slate-200;
+  @media (min-width: 640px) {
+    @apply text-sm;
+  }
+}
+
+.tab-btn-active {
+  @apply bg-emerald-500 text-slate-950 shadow-md;
+}
+
+/* Forms & Inputs */
+.form-card {
+  @apply bg-slate-900 border border-slate-800 p-4 rounded-2xl space-y-3;
+}
+
+.input-field {
+  @apply flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-slate-500;
+}
+
+.primary-btn {
+  @apply bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-5 rounded-xl flex items-center gap-1 text-sm transition-all active:scale-95 shadow-lg shadow-emerald-500/10;
+}
+
+.category-chip {
+  @apply px-3 py-1 rounded-lg border transition-all bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700;
+}
+
+.category-chip-active {
+  @apply bg-emerald-500/10 border-emerald-500 text-emerald-400 font-semibold;
+}
+
+.select-field {
+  @apply bg-slate-950 border border-slate-800 text-slate-300 rounded-lg px-2.5 py-1 focus:outline-none focus:border-emerald-500;
+}
+
+/* List Items */
+.items-card {
+  @apply bg-slate-900/60 border border-slate-800 rounded-2xl p-4 backdrop-blur-sm space-y-2;
+}
+
+.list-item {
+  @apply flex items-center justify-between p-3.5 rounded-xl border transition-all bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700;
+}
+
+.list-item-packed {
+  @apply bg-slate-950/40 border-slate-800/40 text-slate-500;
+}
+
+.category-tag {
+  @apply text-[10px] uppercase font-bold text-slate-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800;
+}
+
+.delete-btn {
+  @apply text-slate-600 hover:text-rose-400 p-1.5 rounded-lg transition-colors;
+}
+
+/* Tab Placeholders */
+.placeholder-card {
+  @apply bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center space-y-3;
+}
