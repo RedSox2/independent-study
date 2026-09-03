@@ -5,6 +5,8 @@ import { useSupabasePackingList } from '@/hooks/useSupabasePackingList';
 import { Header } from '@/components/Header';
 import { AddItemForm } from '@/components/AddItemForm';
 import { CategoryGroup } from '@/components/CategoryGroup';
+import { useTripManager } from '@/components/TripManager';
+
 
 export default function Home() {
   const {
