@@ -43,7 +43,7 @@ export function AddItemForm({ onAddItem, isSubmitting, uniqueAssignees }: AddIte
         type="text"
         value={newItemName}
         onChange={(e) => setNewItemName(e.target.value)}
-        placeholder="Add new gear..."
+        placeholder="Add new item..."
         className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 transition-colors placeholder:text-slate-500"
         disabled={isSubmitting}
       />
