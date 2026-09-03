@@ -33,16 +33,20 @@ export function useSupabasePackingList() {
     }
   };
 
-  // Updated to accept assignedTo
-  const addItem = async (itemName: string, assignedTo: string): Promise<boolean> => {
+  // Updated to accept category parameter
+  const addItem = async (itemName: string, assignedTo: string, category: string): Promise<boolean> => {
     setIsSubmitting(true);
     setErrorMsg(null);
 
     try {
       const { data, error } = await supabase
         .from('packing_items')
-        // Insert the new assigned_to value (save as null if left blank)
-        .insert([{ item_name: itemName, is_packed: false, assigned_to: assignedTo || null }])
+        .insert([{ 
+          item_name: itemName, 
+          is_packed: false, 
+          assigned_to: assignedTo || null,
+          category: category || null // Saves category or null if blank
+        }])
         .select();
 
       if (error) throw error;
